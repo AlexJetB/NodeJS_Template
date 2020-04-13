@@ -1,9 +1,8 @@
-# node-js-getting-started
+# NodeJS_Template
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+This application was originally a barebones template of [node-js-getting-started](https://github.com/heroku/node-js-getting-started) provided by Heroku. It has been revised to accomodate the needs of students taking the CSE341 course at BYU-Idaho. 
 
-This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
-
+Below are instructions provided by the original Heroku repository: 
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
