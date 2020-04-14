@@ -20,21 +20,26 @@ const app = express();
 
 // Route setup. You can implement more in the future!
 const ta01Routes = require('./routes/ta01'); // Not necessary for team activity 02
-const ta03Routes = require('./routes/ta03'); // Core requirement 02
+const ta03Routes = require('./routes/ta03'); // Core requirement 03
 const ta04Routes = require('./routes/ta04'); // Stretch challenge 02
 
 app.use(express.static(path.join(__dirname, 'public')))
    .set('views', path.join(__dirname, 'views'))
    .set('view engine', 'ejs')
+   // For view engine as Pug
+   //.set('view engine', 'pug') // For view engine as PUG. 
+   // For view engine as hbs (Handlebars)
+   //.engine('hbs', expressHbs({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout', extname: 'hbs'})) // For handlebars
+   //.set('view engine', 'hbs')
    .use('/ta01', ta01Routes) // Not necessary for team activity 02
-   .use('/ta03', ta03Routes) // Core requirement 02
+   .use('/ta03', ta03Routes) // Core requirement 03
    .use('/ta04', ta04Routes) // Stretch challenge 02
    .get('/', (req, res, next) => {
      // This is the primary index
      res.render('pages/index', {title: 'Welcome to my CSE341 repo', path: '/'});
     })
    .use((req, res, next) => {
-     // This will serve as our 404 page...
+     // This will serve as our 404 page for stretch challenge 01
      res.render('pages/404', {title: '404 - Page Not Found', path: req.url})
    })
    .listen(PORT, () => console.log(`Listening on ${ PORT }`));
