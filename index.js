@@ -12,9 +12,9 @@
  * IMPORTANT: Make sure to run "npm install" in your root before "npm start"
  *******************************************************************************/
 // Our initial setup (package requires, port number setup)
-const express = require('express')
+const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path')
+const path = require('path');
 const PORT = process.env.PORT || 5000 // So we can run on heroku || (OR) localhost:5000
 
 const app = express();
